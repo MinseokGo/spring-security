@@ -26,8 +26,15 @@ dependencies {
     //oauth2
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 
-    //util
+    //jwt
+    implementation 'com.auth0:java-jwt:4.4.0'   //auth0
 
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.5'    //okta
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+    //util
+    implementation 'org.projectlombok:lombok'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
