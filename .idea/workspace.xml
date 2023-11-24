@@ -5,19 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de81fdb1-029d-4651-922c-80ba10eff674" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/springsecurity/JWTSimpleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springsecurity/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springsecurity/UserLoginForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springsecurity/VerifyResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springsecurity/domain/Authority.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springsecurity/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springsecurity/jwt/JWTCheckFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springsecurity/jwt/JWTLoginFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springsecurity/jwt/JWTUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springsecurity/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/springsecurity/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/springsecurity/JWTRequestTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/springsecurity/WebIntegrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/springsecurity/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/springsecurity/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springsecurity/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/springsecurity/config/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,6 +83,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/minseokgo/Documents/GitHub/spring-security",
@@ -92,8 +100,13 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.JWTSimpleTest.test4">
-    <configuration name="JWTSimpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.springsecurity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.JWTRequestTest.test1">
+    <configuration name="JWTRequestTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-security.test" />
       <extension name="coverage">
         <pattern>
@@ -102,8 +115,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.springsecurity" />
-      <option name="MAIN_CLASS_NAME" value="com.example.springsecurity.JWTSimpleTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.example.springsecurity.JWTRequestTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -112,7 +126,7 @@
       <module name="spring-security.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.springsecurity.*" />
+          <option name="PATTERN" value="com.example.springsecurity.jwt.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,7 +142,7 @@
       <module name="spring-security.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.springsecurity.*" />
+          <option name="PATTERN" value="com.example.springsecurity.jwt.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,7 +158,7 @@
       <module name="spring-security.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.springsecurity.*" />
+          <option name="PATTERN" value="com.example.springsecurity.jwt.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -160,7 +174,7 @@
       <module name="spring-security.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.springsecurity.*" />
+          <option name="PATTERN" value="com.example.springsecurity.jwt.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -181,11 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JWTRequestTest.test1" />
         <item itemvalue="JUnit.JWTSimpleTest.test4" />
         <item itemvalue="JUnit.JWTSimpleTest.test3" />
         <item itemvalue="JUnit.JWTSimpleTest.test2" />
         <item itemvalue="JUnit.JWTSimpleTest.test1" />
-        <item itemvalue="JUnit.JWTSimpleTest" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +213,9 @@
       <updated>1700122884380</updated>
       <workItem from="1700122885527" duration="6149000" />
       <workItem from="1700286389094" duration="5114000" />
-      <workItem from="1700456244724" duration="13240000" />
+      <workItem from="1700456244724" duration="17512000" />
+      <workItem from="1700656349644" duration="598000" />
+      <workItem from="1700794402500" duration="4146000" />
     </task>
     <servers />
   </component>
