@@ -1,9 +1,0 @@
-spring:
-  security:
-    oauth2:
-      client:
-        registration:
-          kakao:
-            client-id: e3743c41d0df1be9ef7bdc6790434cde
-            redirect-uri: http://localhost:8080/login/kakao/redirect
-            client-secret: zLl1gqgJnOSTUsWJBuVad86Ds1yIZd4U
