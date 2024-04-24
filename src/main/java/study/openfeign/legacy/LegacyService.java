@@ -1,5 +1,7 @@
 package study.openfeign.legacy;
 
+import static study.openfeign.legacy.utils.Constants.X_WWW_URL_ENCODED_TYPE;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,8 +19,6 @@ import study.openfeign.legacy.dto.profile.KakaoUserProfile;
 @Service
 @RequiredArgsConstructor
 public class LegacyService {
-
-    public static final String X_WWW_URL_ENCODED_TYPE = "application/x-www-form-urlencoded;charset=utf-8";
 
     private final RestTemplate restTemplate;
 
