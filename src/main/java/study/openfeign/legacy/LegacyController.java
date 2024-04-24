@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import study.openfeign.legacy.utils.LegacyUtils;
 
 @Slf4j
 @Controller
@@ -14,11 +15,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequiredArgsConstructor
 public class LegacyController {
 
+    private final LegacyUtils legacyUtils;
     private final LegacyService legacyService;
 
     @GetMapping("/kakao")
     public String call() {
-        return legacyService.uriCreate();
+        return legacyUtils.uriCreate();
     }
 
     @ResponseBody

@@ -24,13 +24,6 @@ public class LegacyService {
     private final AuthProperties authProperties;
     private final RestTemplate restTemplate;
 
-    public String uriCreate() {
-        return "redirect:https://kauth.kakao.com/oauth/authorize"
-                + "?response_type=code"
-                + "&client_id=" + authProperties.getClientSecret()
-                + "&redirect_uri=" + authProperties.getRedirectUri();
-    }
-
     public void create(String code) {
         KakaoAuthToken authToken = getAccessToken(code);
         KakaoUserProfile userProfile = getUserProfile(authToken);
