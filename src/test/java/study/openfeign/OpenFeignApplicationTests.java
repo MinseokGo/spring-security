@@ -1,10 +1,10 @@
-package com.example.springsecurity;
+package study.openfeign;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringSecurityApplicationTests {
+class OpenFeignApplicationTests {
 
     @Test
     void contextLoads() {
