@@ -3,8 +3,6 @@ package study.openfeign.legacy;
 import static study.openfeign.legacy.utils.Constants.X_WWW_URL_ENCODED_TYPE;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -16,13 +14,12 @@ import study.openfeign.legacy.dto.KakaoAuthToken;
 import study.openfeign.legacy.dto.profile.KakaoUserProfile;
 import study.openfeign.legacy.utils.AuthProperties;
 
-@Slf4j
 @Service
 @RequiredArgsConstructor
 public class LegacyService {
 
-    private final AuthProperties authProperties;
     private final RestTemplate restTemplate;
+    private final AuthProperties authProperties;
 
     public void create(String code) {
         KakaoAuthToken authToken = getAccessToken(code);

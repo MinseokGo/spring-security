@@ -12,7 +12,7 @@ public class LegacyUtils {
     public String uriCreate() {
         return "redirect:https://kauth.kakao.com/oauth/authorize"
                 + "?response_type=code"
-                + "&client_id=" + authProperties.getClientSecret()
+                + "&client_id=" + authProperties.getClientId()
                 + "&redirect_uri=" + authProperties.getRedirectUri();
     }
 }
