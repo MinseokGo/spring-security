@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f80b994-a4ae-4e26-a154-c7b295e5473a" name="변경" comment="" />
+    <list default="true" id="8f80b994-a4ae-4e26-a154-c7b295e5473a" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/testGoogle.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/utils/LegacyUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/utils/LegacyUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTTP Request" />
       </list>
     </option>
   </component>
@@ -64,6 +71,7 @@
   "keyToString": {
     "Gradle.spring-security 빌드.executor": "Run",
     "HTTP 요청.test | #1.executor": "Run",
+    "HTTP 요청.testGoogle | #1.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -89,6 +97,9 @@
     <configuration name="test | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/test.http" requestIdentifier="#1" runType="단일 요청 실행">
       <method v="2" />
     </configuration>
+    <configuration name="testGoogle | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/testGoogle.http" requestIdentifier="#1" runType="단일 요청 실행">
+      <method v="2" />
+    </configuration>
     <configuration name="OpenFeignApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="open-feign.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="study.openfeign.OpenFeignApplication" />
@@ -105,6 +116,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.OpenFeignApplication" />
+        <item itemvalue="HTTP 요청.testGoogle | #1" />
         <item itemvalue="HTTP 요청.test | #1" />
       </list>
     </recent_temporary>
@@ -125,7 +137,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713988957037</updated>
-      <workItem from="1713988958106" duration="1417000" />
+      <workItem from="1713988958106" duration="6707000" />
     </task>
     <servers />
   </component>
