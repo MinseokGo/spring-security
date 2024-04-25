@@ -1,4 +1,6 @@
 package study.openfeign.legacy.dto.google;
 
-public record GoogleUserProfile(String name, String email) {
+import study.openfeign.legacy.service.UserProfile;
+
+public record GoogleUserProfile(String name, String email) implements UserProfile {
 }

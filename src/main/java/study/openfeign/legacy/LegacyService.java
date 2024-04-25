@@ -3,6 +3,7 @@ package study.openfeign.legacy;
 import static study.openfeign.legacy.utils.Constants.X_WWW_URL_ENCODED_TYPE;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,11 +21,11 @@ import study.openfeign.legacy.dto.kakao.profile.KakaoUserProfile;
 import study.openfeign.legacy.dto.naver.NaverAuthToken;
 import study.openfeign.legacy.dto.naver.NaverUserProfile;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class LegacyService {
 
-    private static final Logger log = LoggerFactory.getLogger(LegacyService.class);
     private final RestTemplate restTemplate;
 
     @Value("${kakao.clientId}")

@@ -15,7 +15,7 @@ public class DefaultService {
 
     private final RestTemplate restTemplate;
 
-    private HttpHeaders setHttpHeaders(String... values) {
+    public HttpHeaders setHttpHeaders(String... values) {
         HttpHeaders headers = new HttpHeaders();
         for (int i = 0; i < values.length; i += 2) {
             headers.add(values[i], values[i + 1]);
@@ -23,7 +23,7 @@ public class DefaultService {
         return headers;
     }
 
-    private MultiValueMap<String, String> getAuthorizationToken(String... values) {
+    public MultiValueMap<String, String> createRequestBody(String... values) {
         MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
         for (int i = 0; i < values.length; i += 2) {
             body.add(values[i], values[i + 1]);
@@ -31,7 +31,7 @@ public class DefaultService {
         return body;
     }
 
-    private <T> T restTemplate(String requestURL,
+    public <T> T restTemplate(String requestURL,
                                HttpMethod httpMethod,
                                HttpEntity<MultiValueMap<String, String>> request,
                                Class<T> mappingClass) {

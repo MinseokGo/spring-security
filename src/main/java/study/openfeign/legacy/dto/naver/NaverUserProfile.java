@@ -1,4 +1,6 @@
 package study.openfeign.legacy.dto.naver;
 
-public record NaverUserProfile(Response response) {
+import study.openfeign.legacy.service.UserProfile;
+
+public record NaverUserProfile(Response response) implements UserProfile {
 }

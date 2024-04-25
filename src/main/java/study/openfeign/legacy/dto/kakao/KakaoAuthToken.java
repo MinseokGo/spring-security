@@ -1,6 +1,7 @@
 package study.openfeign.legacy.dto.kakao;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import study.openfeign.legacy.service.AuthToken;
 
 public record KakaoAuthToken(
         @JsonProperty("token_type") String tokenType,
@@ -8,6 +9,5 @@ public record KakaoAuthToken(
         @JsonProperty("expires_in") Integer expiresIn,
         @JsonProperty("refresh_token") String refreshToken,
         @JsonProperty("refresh_token_expires_in") Integer refreshTokenExpiresIn,
-        String scope
-) {
+        String scope) implements AuthToken {
 }

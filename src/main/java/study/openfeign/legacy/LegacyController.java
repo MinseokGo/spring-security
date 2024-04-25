@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import study.openfeign.legacy.service.KakaoService;
 import study.openfeign.legacy.utils.AuthProperties;
 import study.openfeign.legacy.utils.LegacyUtils;
 
@@ -23,6 +24,7 @@ public class LegacyController {
 
     private final LegacyUtils legacyUtils;
     private final LegacyService legacyService;
+    private final KakaoService kakaoService;
 
     @GetMapping("/kakao")
     public String callKakaoLogin() {
@@ -32,7 +34,7 @@ public class LegacyController {
     @ResponseBody
     @GetMapping("/kakao/redirect")
     public String redirectKakao(@RequestParam("code") String code) {
-        legacyService.createKakaoUser(code);
+        kakaoService.create(code);
         return "good";
     }
 
