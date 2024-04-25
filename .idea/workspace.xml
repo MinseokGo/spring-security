@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f80b994-a4ae-4e26-a154-c7b295e5473a" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/NaverAuthService.java" afterDir="false" />
-    </list>
+    <list default="true" id="8f80b994-a4ae-4e26-a154-c7b295e5473a" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +38,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -140,7 +139,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713988957037</updated>
       <workItem from="1713988958106" duration="8284000" />
-      <workItem from="1714024415562" duration="11759000" />
+      <workItem from="1714024415562" duration="12487000" />
     </task>
     <servers />
   </component>
