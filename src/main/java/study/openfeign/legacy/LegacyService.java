@@ -18,6 +18,7 @@ import study.openfeign.legacy.dto.google.GoogleUserProfile;
 import study.openfeign.legacy.dto.kakao.KakaoAuthToken;
 import study.openfeign.legacy.dto.kakao.profile.KakaoUserProfile;
 import study.openfeign.legacy.dto.naver.NaverAuthToken;
+import study.openfeign.legacy.dto.naver.NaverUserProfile;
 
 @Service
 @RequiredArgsConstructor
@@ -126,6 +127,7 @@ public class LegacyService {
 
     public void createNaverUser(String code) {
         NaverAuthToken authToken = getNaverAuthToken(code);
+        NaverUserProfile userProfile = getnNaverUserProfile(authToken);
     }
 
     private NaverAuthToken getNaverAuthToken(String code) {
@@ -143,6 +145,17 @@ public class LegacyService {
                 HttpMethod.POST,
                 request,
                 NaverAuthToken.class);
+    }
+
+    private NaverUserProfile getnNaverUserProfile(NaverAuthToken authToken) {
+        HttpHeaders headers = setHttpHeaders("Authorization", "Bearer " + authToken.accessToken());
+        HttpEntity<MultiValueMap<String, String>> request =  new HttpEntity<>(headers);
+
+        return restTemplate(
+                "https://openapi.naver.com/v1/nid/me",
+                HttpMethod.GET,
+                request,
+                NaverUserProfile.class);
     }
 
     private HttpHeaders setHttpHeaders(String... values) {
