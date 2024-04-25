@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f80b994-a4ae-4e26-a154-c7b295e5473a" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/utils/LegacyUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/utils/LegacyUtils.java" afterDir="false" />
-    </list>
+    <list default="true" id="8f80b994-a4ae-4e26-a154-c7b295e5473a" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,7 +125,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713988957037</updated>
-      <workItem from="1713988958106" duration="1324000" />
+      <workItem from="1713988958106" duration="1417000" />
     </task>
     <servers />
   </component>

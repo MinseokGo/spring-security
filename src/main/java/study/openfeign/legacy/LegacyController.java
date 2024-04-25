@@ -25,7 +25,7 @@ public class LegacyController {
 
     @ResponseBody
     @GetMapping("/kakao/redirect")
-    public String redirect(@RequestParam String code) {
+    public String redirect(@RequestParam("code") String code) {
         legacyService.create(code);
         return "good";
     }
