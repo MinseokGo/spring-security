@@ -1,12 +1,18 @@
 package study.openfeign.legacy;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import study.openfeign.legacy.utils.AuthProperties;
 import study.openfeign.legacy.utils.LegacyUtils;
 
 @Slf4j
