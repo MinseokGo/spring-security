@@ -1,4 +1,4 @@
-package study.openfeign.legacy.dto;
+package study.openfeign.legacy.dto.kakao;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

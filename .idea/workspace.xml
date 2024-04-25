@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f80b994-a4ae-4e26-a154-c7b295e5473a" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/testGoogle.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/google/GoogleAuthToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/google/GoogleUserProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/KakaoAuthToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/kakao/KakaoAuthToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/profile/KakaoAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/kakao/profile/KakaoAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/profile/KakaoUserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/kakao/profile/KakaoUserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/profile/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/kakao/profile/Profile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/utils/LegacyUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/utils/LegacyUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
@@ -36,63 +43,63 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTTP Request" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "MinseokGo"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MinseokGo&quot;
   }
-}]]></component>
+}</component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/MinseokGo/spring-security.git",
-    "accountId": "801e3377-cba7-435e-978b-ff6fbc34e80e"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MinseokGo/spring-security.git&quot;,
+    &quot;accountId&quot;: &quot;801e3377-cba7-435e-978b-ff6fbc34e80e&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2fYrffcQ1jjBCbc6URaBzGjmxBr" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.spring-security 빌드.executor": "Run",
-    "HTTP 요청.test | #1.executor": "Run",
-    "HTTP 요청.testGoogle | #1.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.OpenFeignApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/minseokgo/Documents/GitHub/spring-security",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "프로젝트",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.spring-security 빌드.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 요청.test | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 요청.testGoogle | #1.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.OpenFeignApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/minseokgo/Documents/GitHub/spring-security&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;프로젝트&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Spring Boot.OpenFeignApplication">
     <configuration name="test | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/test.http" requestIdentifier="#1" runType="단일 요청 실행">
       <method v="2" />
@@ -137,7 +144,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713988957037</updated>
-      <workItem from="1713988958106" duration="6707000" />
+      <workItem from="1713988958106" duration="8284000" />
+      <workItem from="1714024415562" duration="6189000" />
     </task>
     <servers />
   </component>
