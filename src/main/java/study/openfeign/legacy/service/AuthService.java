@@ -1,7 +1,6 @@
 package study.openfeign.legacy.service;
 
-import study.openfeign.legacy.dto.kakao.KakaoAuthToken;
-import study.openfeign.legacy.dto.kakao.profile.KakaoUserProfile;
+import study.openfeign.legacy.dto.UserProfile;
 
 public interface AuthService {
 

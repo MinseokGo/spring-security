@@ -1,7 +1,7 @@
 package study.openfeign.legacy.dto.kakao;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import study.openfeign.legacy.service.AuthToken;
+import study.openfeign.legacy.dto.AuthToken;
 
 public record KakaoAuthToken(
         @JsonProperty("token_type") String tokenType,

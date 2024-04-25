@@ -1,7 +1,7 @@
 package study.openfeign.legacy.dto.naver;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import study.openfeign.legacy.service.AuthToken;
+import study.openfeign.legacy.dto.AuthToken;
 
 public record NaverAuthToken(
         @JsonProperty("token_type") String tokenType,

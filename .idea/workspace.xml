@@ -5,19 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f80b994-a4ae-4e26-a154-c7b295e5473a" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/AuthToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/UserProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/GooglAuthService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/google/GoogleAuthToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/google/GoogleAuthToken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/google/GoogleUserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/google/GoogleUserProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/kakao/KakaoAuthToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/kakao/KakaoAuthToken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/kakao/profile/KakaoUserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/kakao/profile/KakaoUserProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/naver/NaverAuthToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/naver/NaverAuthToken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/naver/NaverUserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/naver/NaverUserProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/DefaultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/DefaultService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/KakaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/KakaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/AuthToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/AuthToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/KakaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/KakaoAuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/UserProfile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +44,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTTP Request" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -152,7 +151,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713988957037</updated>
       <workItem from="1713988958106" duration="8284000" />
-      <workItem from="1714024415562" duration="10982000" />
+      <workItem from="1714024415562" duration="11361000" />
     </task>
     <servers />
   </component>

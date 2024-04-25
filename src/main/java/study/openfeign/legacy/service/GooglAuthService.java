@@ -9,23 +9,24 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.util.MultiValueMap;
-import study.openfeign.legacy.dto.kakao.KakaoAuthToken;
-import study.openfeign.legacy.dto.kakao.profile.KakaoUserProfile;
+import study.openfeign.legacy.dto.UserProfile;
+import study.openfeign.legacy.dto.google.GoogleAuthToken;
+import study.openfeign.legacy.dto.google.GoogleUserProfile;
 
 @Service
 @RequiredArgsConstructor
-public class KakaoService implements AuthService {
+public class GooglAuthService implements AuthService {
 
     private final DefaultService defaultService;
 
-    @Value("${kakao.clientId}")
-    private String clientId;
+    @Value("${google.clientId}")
+    private String googleClientId;
 
-    @Value("${kakao.redirectUri}")
-    private String redirectUri;
+    @Value("${google.redirectUri}")
+    private String googleRedirectUri;
 
-    @Value("${kakao.clientSecret}")
-    private String clientSecret;
+    @Value("${google.clientSecret}")
+    private String googleClientSecret;
 
     @Override
     public void create(String code) {
@@ -36,33 +37,33 @@ public class KakaoService implements AuthService {
     @Override
     public String getAccessToken(String code) {
         HttpHeaders headers = defaultService.setHttpHeaders("Content-type", X_WWW_URL_ENCODED_TYPE);
-        MultiValueMap<String, String> body = defaultService.createRequestBody(
+        MultiValueMap<String, String > body = defaultService.createRequestBody(
                 "grant_type", "authorization_code",
                 "code", code,
-                "client_id", clientId,
-                "redirect_uri", redirectUri,
-                "client_secret", clientSecret);
+                "client_id", googleClientId,
+                "redirect_uri", googleRedirectUri,
+                "client_secret", googleClientSecret);
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(body, headers);
 
         return defaultService.restTemplate(
-                "https://kauth.kakao.com/oauth/token",
+                "https://oauth2.googleapis.com/token",
                 HttpMethod.POST,
                 request,
-                KakaoAuthToken.class)
+                GoogleAuthToken.class)
                 .accessToken();
     }
 
     @Override
-    public KakaoUserProfile getUserProfile(String accessToken) {
+    public UserProfile getUserProfile(String accessToken) {
         HttpHeaders headers = defaultService.setHttpHeaders(
                 "Authorization", "Bearer " + accessToken,
                 "Content-type", X_WWW_URL_ENCODED_TYPE);
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(headers);
 
         return defaultService.restTemplate(
-                "https://kapi.kakao.com/v2/user/me",
-                HttpMethod.POST,
+                "https://www.googleapis.com/oauth2/v1/userinfo",
+                HttpMethod.GET,
                 request,
-                KakaoUserProfile.class);
+                GoogleUserProfile.class);
     }
 }

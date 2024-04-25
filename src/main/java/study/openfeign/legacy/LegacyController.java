@@ -1,19 +1,14 @@
 package study.openfeign.legacy;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import study.openfeign.legacy.service.KakaoService;
-import study.openfeign.legacy.utils.AuthProperties;
+import study.openfeign.legacy.service.GooglAuthService;
+import study.openfeign.legacy.service.KakaoAuthService;
 import study.openfeign.legacy.utils.LegacyUtils;
 
 @Slf4j
@@ -24,7 +19,8 @@ public class LegacyController {
 
     private final LegacyUtils legacyUtils;
     private final LegacyService legacyService;
-    private final KakaoService kakaoService;
+    private final KakaoAuthService kakaoAuthService;
+    private final GooglAuthService googlAuthService;
 
     @GetMapping("/kakao")
     public String callKakaoLogin() {
@@ -34,7 +30,7 @@ public class LegacyController {
     @ResponseBody
     @GetMapping("/kakao/redirect")
     public String redirectKakao(@RequestParam("code") String code) {
-        kakaoService.create(code);
+        kakaoAuthService.create(code);
         return "good";
     }
 
@@ -43,9 +39,11 @@ public class LegacyController {
         return legacyUtils.googleURL();
     }
 
+    @ResponseBody
     @GetMapping("/google/redirect")
-    public void redirectGoogle(@RequestParam("code") String code) {
-        legacyService.createGoogleUser(code);
+    public String redirectGoogle(@RequestParam("code") String code) {
+        googlAuthService.create(code);
+        return "good";
     }
 
     @GetMapping("/naver")
