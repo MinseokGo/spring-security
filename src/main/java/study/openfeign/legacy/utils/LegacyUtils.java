@@ -23,4 +23,12 @@ public class LegacyUtils {
                 + "&redirect_uri=" + "http://localhost:8080/login/google/redirect"
                 + "&scope=email profile";
     }
+
+    public String naverURL() {
+        return "redirect:https://nid.naver.com/oauth2.0/authorize"
+                + "?response_type=code"
+                + "&client_id=" + "nHDSZ2mlOZaoxWrR8Ta5"
+                + "&redirect_uri=" + "http://localhost:8080/login/naver/redirect"
+                + "&state=minseok";
+    }
 }

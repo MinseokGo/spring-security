@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f80b994-a4ae-4e26-a154-c7b295e5473a" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/google/GoogleAuthToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/google/GoogleUserProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/naver/NaverAuthToken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/LegacyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/KakaoAuthToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/kakao/KakaoAuthToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/profile/KakaoAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/kakao/profile/KakaoAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/profile/KakaoUserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/kakao/profile/KakaoUserProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/profile/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/dto/kakao/profile/Profile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/utils/LegacyUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/utils/LegacyUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
@@ -145,7 +139,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713988957037</updated>
       <workItem from="1713988958106" duration="8284000" />
-      <workItem from="1714024415562" duration="6189000" />
+      <workItem from="1714024415562" duration="7840000" />
     </task>
     <servers />
   </component>

@@ -39,4 +39,14 @@ public class LegacyController {
     public void redirectGoogle(@RequestParam("code") String code) {
         legacyService.createGoogleUser(code);
     }
+
+    @GetMapping("/naver")
+    public String callNaverLogin() {
+        return legacyUtils.naverURL();
+    }
+
+    @GetMapping("/naver/redirect")
+    public void redirectNaver(@RequestParam("code") String code) {
+        legacyService.createNaverUser(code);
+    }
 }

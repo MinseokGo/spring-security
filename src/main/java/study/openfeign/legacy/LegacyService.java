@@ -17,6 +17,7 @@ import study.openfeign.legacy.dto.google.GoogleAuthToken;
 import study.openfeign.legacy.dto.google.GoogleUserProfile;
 import study.openfeign.legacy.dto.kakao.KakaoAuthToken;
 import study.openfeign.legacy.dto.kakao.profile.KakaoUserProfile;
+import study.openfeign.legacy.dto.naver.NaverAuthToken;
 
 @Service
 @RequiredArgsConstructor
@@ -43,6 +44,15 @@ public class LegacyService {
     @Value("${google.clientSecret}")
     private String googleClientSecret;
 
+    @Value("${naver.clientId}")
+    private String naverClientId;
+
+    @Value("${naver.redirectUri}")
+    private String naverRedirectUri;
+
+    @Value("${naver.clientSecret}")
+    private String naverClientSecret;
+
     public void createKakaoUser(String code) {
         KakaoAuthToken authToken = getKakaoAccessToken(code);
         KakaoUserProfile userProfile = getKakaoUserProfile(authToken);
@@ -51,10 +61,11 @@ public class LegacyService {
     private KakaoAuthToken getKakaoAccessToken(String code) {
         HttpHeaders headers = setHttpHeaders("Content-type", X_WWW_URL_ENCODED_TYPE);
         MultiValueMap<String, String> body = getAuthorizationToken(
-                code,
-                kakaoClientId,
-                kakaoRedirectUri,
-                kakaoClientSecret);
+                "grant_type", "authorization_code",
+                "code", code,
+                "client_id", kakaoClientId,
+                "redirect_uri", kakaoRedirectUri,
+                "client_secret", kakaoClientSecret);
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(body, headers);
 
         return restTemplate(
@@ -82,6 +93,24 @@ public class LegacyService {
         GoogleUserProfile userProfile = getGoogleUserProfile(authToken);
     }
 
+    private GoogleAuthToken getGoogleAuthToken(String code) {
+        HttpHeaders headers = setHttpHeaders("Content-type", X_WWW_URL_ENCODED_TYPE);
+        MultiValueMap<String, String > body = getAuthorizationToken(
+                "grant_type", "authorization_code",
+                "code", code,
+                "client_id", googleClientId,
+                "redirect_uri", googleRedirectUri,
+                "client_secret", googleClientSecret);
+        HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(body, headers);
+
+        return restTemplate(
+                "https://oauth2.googleapis.com/token",
+                HttpMethod.POST,
+                request,
+                GoogleAuthToken.class
+        );
+    }
+
     private GoogleUserProfile getGoogleUserProfile(GoogleAuthToken googleAuthToken) {
         HttpHeaders headers = setHttpHeaders(
                 "Authorization", "Bearer " + googleAuthToken.accessToken(),
@@ -95,21 +124,25 @@ public class LegacyService {
                 GoogleUserProfile.class);
     }
 
-    private GoogleAuthToken getGoogleAuthToken(String code) {
+    public void createNaverUser(String code) {
+        NaverAuthToken authToken = getNaverAuthToken(code);
+    }
+
+    private NaverAuthToken getNaverAuthToken(String code) {
         HttpHeaders headers = setHttpHeaders("Content-type", X_WWW_URL_ENCODED_TYPE);
-        MultiValueMap<String, String > body = getAuthorizationToken(
-                code,
-                googleClientId,
-                googleRedirectUri,
-                googleClientSecret);
+        MultiValueMap<String, String> body = getAuthorizationToken(
+                "grant_type", "authorization_code",
+                "code", code,
+                "client_id", naverClientId,
+                "client_secret", naverClientSecret,
+                "status", "minseok");
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(body, headers);
 
         return restTemplate(
-                "https://oauth2.googleapis.com/token",
+                "https://nid.naver.com/oauth2.0/token",
                 HttpMethod.POST,
                 request,
-                GoogleAuthToken.class
-        );
+                NaverAuthToken.class);
     }
 
     private HttpHeaders setHttpHeaders(String... values) {
@@ -120,13 +153,11 @@ public class LegacyService {
         return headers;
     }
 
-    private MultiValueMap<String, String> getAuthorizationToken(String code, String... values) {
+    private MultiValueMap<String, String> getAuthorizationToken(String... values) {
         MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
-        body.add("grant_type", "authorization_code");
-        body.add("client_id", values[0]);
-        body.add("redirect_uri", values[1]);
-        body.add("code", code);
-        body.add("client_secret", values[2]);
+        for (int i = 0; i < values.length; i += 2) {
+            body.add(values[i], values[i + 1]);
+        }
         return body;
     }
 
