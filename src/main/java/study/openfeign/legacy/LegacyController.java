@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import study.openfeign.legacy.service.GooglAuthService;
 import study.openfeign.legacy.service.KakaoAuthService;
+import study.openfeign.legacy.service.NaverAuthService;
 import study.openfeign.legacy.utils.LegacyUtils;
 
 @Slf4j
@@ -18,9 +19,9 @@ import study.openfeign.legacy.utils.LegacyUtils;
 public class LegacyController {
 
     private final LegacyUtils legacyUtils;
-    private final LegacyService legacyService;
     private final KakaoAuthService kakaoAuthService;
     private final GooglAuthService googlAuthService;
+    private final NaverAuthService naverAuthService;
 
     @GetMapping("/kakao")
     public String callKakaoLogin() {
@@ -51,8 +52,10 @@ public class LegacyController {
         return legacyUtils.naverURL();
     }
 
+    @ResponseBody
     @GetMapping("/naver/redirect")
-    public void redirectNaver(@RequestParam("code") String code) {
-        legacyService.createNaverUser(code);
+    public String redirectNaver(@RequestParam("code") String code) {
+        naverAuthService.create(code);
+        return "good";
     }
 }
