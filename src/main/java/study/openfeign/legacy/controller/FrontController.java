@@ -20,7 +20,8 @@ public class FrontController {
     @GetMapping
     public String redirect(@PathVariable("name") String name) {
         ControllerService controllerService = condition.getControllerService(name);
-        return Objects.requireNonNull(controllerService).create();
+        return Objects.requireNonNull(controllerService)
+                .getRedirectURL();
     }
 
     @ResponseBody
@@ -29,7 +30,8 @@ public class FrontController {
                            @RequestParam("code") String code) {
 
         ControllerService controllerService = condition.getControllerService(name);
-        Objects.requireNonNull(controllerService).auth(code);
+        Objects.requireNonNull(controllerService)
+                .oauth(code);
         return name;
     }
 }

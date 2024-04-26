@@ -14,12 +14,12 @@ public class GoogleControllerService implements ControllerService {
     private final GooglAuthService authService;
 
     @Override
-    public String create() {
+    public String getRedirectURL() {
         return URLUtils.createURL(authProperties);
     }
 
     @Override
-    public void auth(String code) {
+    public void oauth(String code) {
         authService.create(code);
     }
 }

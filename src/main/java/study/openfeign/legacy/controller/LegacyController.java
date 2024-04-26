@@ -7,10 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import study.openfeign.legacy.service.GooglAuthService;
-import study.openfeign.legacy.service.KakaoAuthService;
 import study.openfeign.legacy.service.LegacyService;
-import study.openfeign.legacy.service.NaverAuthService;
 import study.openfeign.legacy.utils.LegacyUtils;
 
 @Slf4j

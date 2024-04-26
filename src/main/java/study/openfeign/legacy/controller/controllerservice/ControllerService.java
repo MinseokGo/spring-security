@@ -2,7 +2,7 @@ package study.openfeign.legacy.controller.controllerservice;
 
 public interface ControllerService {
 
-    String create();
+    String getRedirectURL();
 
-    void auth(String code);
+    void oauth(String code);
 }
