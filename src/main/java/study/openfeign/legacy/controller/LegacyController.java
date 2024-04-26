@@ -1,3 +1,7 @@
+/**
+ * Deprecated legacy controller
+ */
+/*
 package study.openfeign.legacy.controller;
 
 import lombok.RequiredArgsConstructor;
@@ -59,3 +63,4 @@ public class LegacyController {
         return "good";
     }
 }
+*/

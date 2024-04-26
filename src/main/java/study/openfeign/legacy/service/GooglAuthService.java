@@ -3,7 +3,6 @@ package study.openfeign.legacy.service;
 import static study.openfeign.legacy.utils.Constants.X_WWW_URL_ENCODED_TYPE;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -12,21 +11,14 @@ import org.springframework.util.MultiValueMap;
 import study.openfeign.legacy.dto.UserProfile;
 import study.openfeign.legacy.dto.google.GoogleAuthToken;
 import study.openfeign.legacy.dto.google.GoogleUserProfile;
+import study.openfeign.legacy.properties.GoogleAuthProperties;
 
 @Service
 @RequiredArgsConstructor
 public class GooglAuthService implements AuthService {
 
     private final DefaultService defaultService;
-
-    @Value("${google.clientId}")
-    private String googleClientId;
-
-    @Value("${google.redirectUri}")
-    private String googleRedirectUri;
-
-    @Value("${google.clientSecret}")
-    private String googleClientSecret;
+    private final GoogleAuthProperties googleAuthProperties;
 
     @Override
     public void create(String code) {
@@ -40,9 +32,9 @@ public class GooglAuthService implements AuthService {
         MultiValueMap<String, String > body = defaultService.createRequestBody(
                 "grant_type", "authorization_code",
                 "code", code,
-                "client_id", googleClientId,
-                "redirect_uri", googleRedirectUri,
-                "client_secret", googleClientSecret);
+                "client_id", googleAuthProperties.getClientId(),
+                "redirect_uri", googleAuthProperties.getRedirectUri(),
+                "client_secret", googleAuthProperties.getClientSecret());
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(body, headers);
 
         return defaultService.restTemplate(

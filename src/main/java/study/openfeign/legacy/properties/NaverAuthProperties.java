@@ -1,4 +1,4 @@
-package study.openfeign.legacy.utils;
+package study.openfeign.legacy.properties;
 
 import java.util.Map;
 import lombok.Getter;

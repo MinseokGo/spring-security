@@ -3,7 +3,6 @@ package study.openfeign.legacy.service;
 import static study.openfeign.legacy.utils.Constants.X_WWW_URL_ENCODED_TYPE;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -11,21 +10,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.MultiValueMap;
 import study.openfeign.legacy.dto.kakao.KakaoAuthToken;
 import study.openfeign.legacy.dto.kakao.profile.KakaoUserProfile;
+import study.openfeign.legacy.properties.KakaoAuthProperties;
 
 @Service
 @RequiredArgsConstructor
 public class KakaoAuthService implements AuthService {
 
     private final DefaultService defaultService;
-
-    @Value("${kakao.clientId}")
-    private String clientId;
-
-    @Value("${kakao.redirectUri}")
-    private String redirectUri;
-
-    @Value("${kakao.clientSecret}")
-    private String clientSecret;
+    private final KakaoAuthProperties kakaoAuthProperties;
 
     @Override
     public void create(String code) {
@@ -39,9 +31,9 @@ public class KakaoAuthService implements AuthService {
         MultiValueMap<String, String> body = defaultService.createRequestBody(
                 "grant_type", "authorization_code",
                 "code", code,
-                "client_id", clientId,
-                "redirect_uri", redirectUri,
-                "client_secret", clientSecret);
+                "client_id", kakaoAuthProperties.getClientId(),
+                "redirect_uri", kakaoAuthProperties.getRedirectUri(),
+                "client_secret", kakaoAuthProperties.getClientSecret());
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(body, headers);
 
         return defaultService.restTemplate(

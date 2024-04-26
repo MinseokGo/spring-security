@@ -3,7 +3,6 @@ package study.openfeign.legacy.service;
 import static study.openfeign.legacy.utils.Constants.X_WWW_URL_ENCODED_TYPE;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -12,21 +11,14 @@ import org.springframework.util.MultiValueMap;
 import study.openfeign.legacy.dto.UserProfile;
 import study.openfeign.legacy.dto.naver.NaverAuthToken;
 import study.openfeign.legacy.dto.naver.NaverUserProfile;
+import study.openfeign.legacy.properties.NaverAuthProperties;
 
 @Service
 @RequiredArgsConstructor
 public class NaverAuthService implements AuthService {
 
     private final DefaultService defaultService;
-
-    @Value("${naver.clientId}")
-    private String clientId;
-
-    @Value("${naver.redirectUri}")
-    private String redirectUri;
-
-    @Value("${naver.clientSecret}")
-    private String clientSecret;
+    private final NaverAuthProperties naverAuthProperties;
 
     @Override
     public void create(String code) {
@@ -40,9 +32,9 @@ public class NaverAuthService implements AuthService {
         MultiValueMap<String, String> body = defaultService.createRequestBody(
                 "grant_type", "authorization_code",
                 "code", code,
-                "client_id", clientId,
-                "client_secret", clientSecret,
-                "status", "minseok");
+                "client_id", naverAuthProperties.getClientId(),
+                "client_secret", naverAuthProperties.getClientSecret(),
+                "status", naverAuthProperties.getState());
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(body, headers);
 
         return defaultService.restTemplate(

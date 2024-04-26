@@ -1,4 +1,4 @@
-package study.openfeign.legacy.utils;
+package study.openfeign.legacy.properties;
 
 import java.util.Map;
 import lombok.Getter;
@@ -9,14 +9,14 @@ import org.springframework.stereotype.Component;
 @Getter
 @Setter
 @Component
-@ConfigurationProperties(prefix = "google")
-public class GoogleAuthProperties implements AuthProperties {
+@ConfigurationProperties(prefix = "kakao")
+public class KakaoAuthProperties implements AuthProperties {
 
     private String clientId;
     private String redirectUri;
     private String clientSecret;
     private String requestUri;
-    private String scope;
+
 
     @Override
     public String mapping() {
@@ -30,7 +30,6 @@ public class GoogleAuthProperties implements AuthProperties {
     private Map<String, String> getPropertiesMap() {
         return Map.of(
                 "client_id", clientId,
-                "redirect_uri", redirectUri,
-                "scope", scope);
+                "redirect_uri", redirectUri);
     }
 }
