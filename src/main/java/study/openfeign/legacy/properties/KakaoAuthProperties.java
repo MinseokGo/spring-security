@@ -16,6 +16,8 @@ public class KakaoAuthProperties implements AuthProperties {
     private String redirectUri;
     private String clientSecret;
     private String requestUri;
+    private String tokenUri;
+    private String userInfoUri;
 
 
     @Override
