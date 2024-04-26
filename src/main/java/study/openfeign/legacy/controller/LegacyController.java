@@ -1,4 +1,4 @@
-package study.openfeign.legacy;
+package study.openfeign.legacy.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
