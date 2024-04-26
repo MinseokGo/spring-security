@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f80b994-a4ae-4e26-a154-c7b295e5473a" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/ControllerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/ControllerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/controllerservice/GoogleControllerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/controllerservice/KakaoControllerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/controllerservice/NaverControllerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/ControllerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/controllerservice/ControllerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/ControllerServiceCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/ControllerServiceCondition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/FrontController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
@@ -163,7 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713988957037</updated>
       <workItem from="1713988958106" duration="8284000" />
-      <workItem from="1714024415562" duration="29553000" />
+      <workItem from="1714024415562" duration="30049000" />
     </task>
     <servers />
   </component>
