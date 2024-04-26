@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f80b994-a4ae-4e26-a154-c7b295e5473a" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/ControllerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/ControllerServiceCondition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/ControllerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/ControllerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/ControllerServiceCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/ControllerServiceCondition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/FrontController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/LegacyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/controller/LegacyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/GooglAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/GooglAuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/KakaoAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/KakaoAuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/NaverAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/service/NaverAuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/utils/AuthProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/properties/AuthProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/utils/GoogleAuthProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/properties/GoogleAuthProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/utils/KakaoAuthProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/properties/KakaoAuthProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/utils/NaverAuthProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/properties/NaverAuthProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/utils/URLUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/openfeign/legacy/utils/URLUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +94,7 @@
     "project.structure.last.edited": "프로젝트",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.import",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true",
     "애플리케이션.AuthProperties.executor": "Run"
   }
@@ -173,11 +163,15 @@
       <option name="presentableId" value="Default" />
       <updated>1713988957037</updated>
       <workItem from="1713988958106" duration="8284000" />
-      <workItem from="1714024415562" duration="23801000" />
+      <workItem from="1714024415562" duration="29553000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

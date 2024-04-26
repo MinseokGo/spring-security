@@ -24,7 +24,9 @@ public class FrontController {
 
     @ResponseBody
     @GetMapping("/redirect")
-    public String callback(@PathVariable("name") String name, @RequestParam("code") String code) {
+    public String callback(@PathVariable("name") String name,
+                           @RequestParam("code") String code) {
+
         ControllerService controllerService = condition.getControllerService(name);
         Objects.requireNonNull(controllerService).auth(code);
         return name;

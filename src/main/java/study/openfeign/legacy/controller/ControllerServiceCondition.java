@@ -5,6 +5,7 @@ import static study.openfeign.legacy.utils.Constants.KAKAO;
 import static study.openfeign.legacy.utils.Constants.NAVER;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import study.openfeign.legacy.properties.GoogleAuthProperties;
 import study.openfeign.legacy.properties.KakaoAuthProperties;
@@ -13,6 +14,7 @@ import study.openfeign.legacy.service.GooglAuthService;
 import study.openfeign.legacy.service.KakaoAuthService;
 import study.openfeign.legacy.service.NaverAuthService;
 
+@Slf4j
 @Component
 @RequiredArgsConstructor
 public class ControllerServiceCondition {
@@ -36,6 +38,7 @@ public class ControllerServiceCondition {
         if (name.equals(NAVER)) {
             controllerService = new ControllerService(naverAuthProperties, naverAuthService);
         }
+        log.info("controllerService={}", controllerService);
         return controllerService;
     }
 }

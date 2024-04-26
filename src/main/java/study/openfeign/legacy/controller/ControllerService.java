@@ -1,8 +1,8 @@
 package study.openfeign.legacy.controller;
 
 import lombok.RequiredArgsConstructor;
-import study.openfeign.legacy.service.AuthService;
 import study.openfeign.legacy.properties.AuthProperties;
+import study.openfeign.legacy.service.AuthService;
 import study.openfeign.legacy.utils.URLUtils;
 
 @RequiredArgsConstructor
