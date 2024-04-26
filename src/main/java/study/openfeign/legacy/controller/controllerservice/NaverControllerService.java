@@ -1,12 +1,14 @@
 package study.openfeign.legacy.controller.controllerservice;
 
+import static study.openfeign.legacy.utils.Constants.NAVER;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import study.openfeign.legacy.properties.NaverAuthProperties;
 import study.openfeign.legacy.service.NaverAuthService;
 import study.openfeign.legacy.utils.URLUtils;
 
-@Component
+@Component(NAVER)
 @RequiredArgsConstructor
 public class NaverControllerService implements ControllerService {
 

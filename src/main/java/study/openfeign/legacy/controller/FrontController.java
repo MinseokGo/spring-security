@@ -1,6 +1,5 @@
 package study.openfeign.legacy.controller;
 
-import java.util.Objects;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,8 +19,7 @@ public class FrontController {
     @GetMapping
     public String redirect(@PathVariable("name") String name) {
         ControllerService controllerService = condition.getControllerService(name);
-        return Objects.requireNonNull(controllerService)
-                .getRedirectURL();
+        return controllerService.getRedirectURL();
     }
 
     @ResponseBody
@@ -30,8 +28,7 @@ public class FrontController {
                            @RequestParam("code") String code) {
 
         ControllerService controllerService = condition.getControllerService(name);
-        Objects.requireNonNull(controllerService)
-                .oauth(code);
+        controllerService.oauth(code);
         return name;
     }
 }

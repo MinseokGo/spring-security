@@ -1,12 +1,14 @@
 package study.openfeign.legacy.controller.controllerservice;
 
+import static study.openfeign.legacy.utils.Constants.GOOGLE;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import study.openfeign.legacy.properties.GoogleAuthProperties;
 import study.openfeign.legacy.service.GooglAuthService;
 import study.openfeign.legacy.utils.URLUtils;
 
-@Component
+@Component(GOOGLE)
 @RequiredArgsConstructor
 public class GoogleControllerService implements ControllerService {
 

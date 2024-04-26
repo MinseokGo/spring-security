@@ -1,12 +1,14 @@
 package study.openfeign.legacy.controller.controllerservice;
 
+import static study.openfeign.legacy.utils.Constants.KAKAO;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import study.openfeign.legacy.properties.KakaoAuthProperties;
 import study.openfeign.legacy.service.KakaoAuthService;
 import study.openfeign.legacy.utils.URLUtils;
 
-@Component
+@Component(KAKAO)
 @RequiredArgsConstructor
 public class KakaoControllerService implements ControllerService {
 
