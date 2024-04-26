@@ -17,6 +17,8 @@ public class GoogleAuthProperties implements AuthProperties {
     private String clientSecret;
     private String requestUri;
     private String scope;
+    private String tokenUri;
+    private String userInfoUri;
 
     @Override
     public String mapping() {

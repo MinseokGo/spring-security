@@ -1,5 +1,14 @@
 package study.openfeign.legacy.service;
 
+import static study.openfeign.legacy.utils.Constants.AUTHORIZATION;
+import static study.openfeign.legacy.utils.Constants.AUTHORIZATION_CODE;
+import static study.openfeign.legacy.utils.Constants.CLIENT_ID;
+import static study.openfeign.legacy.utils.Constants.CLIENT_SECRET;
+import static study.openfeign.legacy.utils.Constants.CODE;
+import static study.openfeign.legacy.utils.Constants.CONTENT_TYPE;
+import static study.openfeign.legacy.utils.Constants.GRANT_TYPE;
+import static study.openfeign.legacy.utils.Constants.REDIRECT_URI;
+import static study.openfeign.legacy.utils.Constants.TOKEN_PREFIX;
 import static study.openfeign.legacy.utils.Constants.X_WWW_URL_ENCODED_TYPE;
 
 import lombok.RequiredArgsConstructor;
@@ -18,7 +27,7 @@ import study.openfeign.legacy.properties.GoogleAuthProperties;
 public class GooglAuthService implements AuthService {
 
     private final DefaultService defaultService;
-    private final GoogleAuthProperties googleAuthProperties;
+    private final GoogleAuthProperties authProperties;
 
     @Override
     public void create(String code) {
@@ -28,17 +37,17 @@ public class GooglAuthService implements AuthService {
 
     @Override
     public String getAccessToken(String code) {
-        HttpHeaders headers = defaultService.setHttpHeaders("Content-type", X_WWW_URL_ENCODED_TYPE);
+        HttpHeaders headers = defaultService.setHttpHeaders(CONTENT_TYPE, X_WWW_URL_ENCODED_TYPE);
         MultiValueMap<String, String > body = defaultService.createRequestBody(
-                "grant_type", "authorization_code",
-                "code", code,
-                "client_id", googleAuthProperties.getClientId(),
-                "redirect_uri", googleAuthProperties.getRedirectUri(),
-                "client_secret", googleAuthProperties.getClientSecret());
+                GRANT_TYPE, AUTHORIZATION_CODE,
+                CODE, code,
+                CLIENT_ID, authProperties.getClientId(),
+                REDIRECT_URI, authProperties.getRedirectUri(),
+                CLIENT_SECRET, authProperties.getClientSecret());
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(body, headers);
 
         return defaultService.restTemplate(
-                "https://oauth2.googleapis.com/token",
+                authProperties.getTokenUri(),
                 HttpMethod.POST,
                 request,
                 GoogleAuthToken.class)
@@ -48,12 +57,12 @@ public class GooglAuthService implements AuthService {
     @Override
     public UserProfile getUserProfile(String accessToken) {
         HttpHeaders headers = defaultService.setHttpHeaders(
-                "Authorization", "Bearer " + accessToken,
-                "Content-type", X_WWW_URL_ENCODED_TYPE);
+                AUTHORIZATION, TOKEN_PREFIX + accessToken,
+                CONTENT_TYPE, X_WWW_URL_ENCODED_TYPE);
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(headers);
 
         return defaultService.restTemplate(
-                "https://www.googleapis.com/oauth2/v1/userinfo",
+                authProperties.getUserInfoUri(),
                 HttpMethod.GET,
                 request,
                 GoogleUserProfile.class);
