@@ -1,5 +1,14 @@
 package study.openfeign.legacy.service;
 
+import static study.openfeign.legacy.utils.Constants.AUTHORIZATION;
+import static study.openfeign.legacy.utils.Constants.AUTHORIZATION_CODE;
+import static study.openfeign.legacy.utils.Constants.CLIENT_ID;
+import static study.openfeign.legacy.utils.Constants.CLIENT_SECRET;
+import static study.openfeign.legacy.utils.Constants.CODE;
+import static study.openfeign.legacy.utils.Constants.CONTENT_TYPE;
+import static study.openfeign.legacy.utils.Constants.GRANT_TYPE;
+import static study.openfeign.legacy.utils.Constants.STATUS;
+import static study.openfeign.legacy.utils.Constants.TOKEN_PREFIX;
 import static study.openfeign.legacy.utils.Constants.X_WWW_URL_ENCODED_TYPE;
 
 import lombok.RequiredArgsConstructor;
@@ -18,7 +27,7 @@ import study.openfeign.legacy.properties.NaverAuthProperties;
 public class NaverAuthService implements AuthService {
 
     private final DefaultService defaultService;
-    private final NaverAuthProperties naverAuthProperties;
+    private final NaverAuthProperties authProperties;
 
     @Override
     public void create(String code) {
@@ -28,17 +37,17 @@ public class NaverAuthService implements AuthService {
 
     @Override
     public String getAccessToken(String code) {
-        HttpHeaders headers = defaultService.setHttpHeaders("Content-type", X_WWW_URL_ENCODED_TYPE);
+        HttpHeaders headers = defaultService.setHttpHeaders(CONTENT_TYPE, X_WWW_URL_ENCODED_TYPE);
         MultiValueMap<String, String> body = defaultService.createRequestBody(
-                "grant_type", "authorization_code",
-                "code", code,
-                "client_id", naverAuthProperties.getClientId(),
-                "client_secret", naverAuthProperties.getClientSecret(),
-                "status", naverAuthProperties.getState());
+                GRANT_TYPE, AUTHORIZATION_CODE,
+                CODE, code,
+                CLIENT_ID, authProperties.getClientId(),
+                CLIENT_SECRET, authProperties.getClientSecret(),
+                STATUS, authProperties.getState());
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(body, headers);
 
         return defaultService.restTemplate(
-                "https://nid.naver.com/oauth2.0/token",
+                authProperties.getTokenUri(),
                 HttpMethod.POST,
                 request, NaverAuthToken.class)
                 .accessToken();
@@ -46,11 +55,11 @@ public class NaverAuthService implements AuthService {
 
     @Override
     public UserProfile getUserProfile(String accessToken) {
-        HttpHeaders headers = defaultService.setHttpHeaders("Authorization", "Bearer " + accessToken);
+        HttpHeaders headers = defaultService.setHttpHeaders(AUTHORIZATION, TOKEN_PREFIX + accessToken);
         HttpEntity<MultiValueMap<String, String>> request =  new HttpEntity<>(headers);
 
         return defaultService.restTemplate(
-                "https://openapi.naver.com/v1/nid/me",
+                authProperties.getUserInfoUri(),
                 HttpMethod.GET,
                 request,
                 NaverUserProfile.class);

@@ -17,6 +17,8 @@ public class NaverAuthProperties implements AuthProperties{
     private String clientSecret;
     private String requestUri;
     private String state;
+    private String tokenUri;
+    private String userInfoUri;
 
     @Override
     public String mapping() {

@@ -20,4 +20,7 @@ public class Constants {
     public static final String REDIRECT_URI = "redirect_uri";
     public static final String CLIENT_SECRET = "client_secret";
     public static final String CODE = "code";
+
+    // naver
+    public static final String STATUS = "status";
 }
