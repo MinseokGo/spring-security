@@ -1,7 +1,3 @@
-/**
- * Deprecated legacy controller
- */
-/*
 package study.openfeign.legacy.controller;
 
 import lombok.RequiredArgsConstructor;
@@ -13,19 +9,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import study.openfeign.legacy.service.GooglAuthService;
 import study.openfeign.legacy.service.KakaoAuthService;
+import study.openfeign.legacy.service.LegacyService;
 import study.openfeign.legacy.service.NaverAuthService;
 import study.openfeign.legacy.utils.LegacyUtils;
 
 @Slf4j
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/login")
+@RequestMapping("/legacy/login")
 public class LegacyController {
 
     private final LegacyUtils legacyUtils;
-    private final KakaoAuthService kakaoAuthService;
-    private final GooglAuthService googlAuthService;
-    private final NaverAuthService naverAuthService;
+    private final LegacyService legacyService;
 
     @GetMapping("/kakao")
     public String callKakaoLogin() {
@@ -35,7 +30,7 @@ public class LegacyController {
     @ResponseBody
     @GetMapping("/kakao/redirect")
     public String redirectKakao(@RequestParam("code") String code) {
-        kakaoAuthService.create(code);
+        legacyService.createKakaoUser(code);
         return "good";
     }
 
@@ -47,7 +42,7 @@ public class LegacyController {
     @ResponseBody
     @GetMapping("/google/redirect")
     public String redirectGoogle(@RequestParam("code") String code) {
-        googlAuthService.create(code);
+        legacyService.createGoogleUser(code);
         return "good";
     }
 
@@ -59,8 +54,7 @@ public class LegacyController {
     @ResponseBody
     @GetMapping("/naver/redirect")
     public String redirectNaver(@RequestParam("code") String code) {
-        naverAuthService.create(code);
+        legacyService.createNaverUser(code);
         return "good";
     }
 }
-*/

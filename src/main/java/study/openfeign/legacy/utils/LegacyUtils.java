@@ -2,6 +2,7 @@ package study.openfeign.legacy.utils;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import study.openfeign.legacy.properties.AuthProperties;
 
 /**
  * Deprecated legacy utils
@@ -10,14 +11,12 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class LegacyUtils {
 
-    //private final AuthProperties authProperties;
-
-//    public String kakaoURL() {
-//        return "redirect:https://kauth.kakao.com/oauth/authorize"
-//                + "?response_type=code"
-//                + "&client_id=" + authProperties.getClientId()
-//                + "&redirect_uri=" + authProperties.getRedirectUri();
-//    }
+    public String kakaoURL() {
+        return "redirect:https://kauth.kakao.com/oauth/authorize"
+                + "?response_type=code"
+                + "&client_id=" + "e3743c41d0df1be9ef7bdc6790434cde"
+                + "&redirect_uri=" + "http://localhost:8080/login/kakao/redirect";
+    }
 
     public String googleURL() {
         return "redirect:https://accounts.google.com/o/oauth2/v2/auth"

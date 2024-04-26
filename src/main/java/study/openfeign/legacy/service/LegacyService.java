@@ -47,9 +47,6 @@ public class LegacyService {
     @Value("${naver.clientId}")
     private String naverClientId;
 
-    @Value("${naver.redirectUri}")
-    private String naverRedirectUri;
-
     @Value("${naver.clientSecret}")
     private String naverClientSecret;
 
