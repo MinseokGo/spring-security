@@ -17,6 +17,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.util.MultiValueMap;
+import study.openfeign.domain.User;
 import study.openfeign.legacy.dto.UserProfile;
 import study.openfeign.legacy.dto.naver.NaverAuthToken;
 import study.openfeign.legacy.dto.naver.NaverUserProfile;
@@ -26,13 +27,16 @@ import study.openfeign.legacy.properties.NaverAuthProperties;
 @RequiredArgsConstructor
 public class NaverAuthService implements AuthService {
 
+    private final UserService userService;
     private final DefaultService defaultService;
     private final NaverAuthProperties authProperties;
 
     @Override
     public void create(String code) {
         String accessToken = getAccessToken(code);
-        getUserProfile(accessToken);
+        UserProfile userProfile = getUserProfile(accessToken);
+        User user = userProfile.toEntity();
+        userService.save(user);
     }
 
     @Override

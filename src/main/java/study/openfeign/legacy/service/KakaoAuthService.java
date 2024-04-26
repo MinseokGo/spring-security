@@ -17,6 +17,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.util.MultiValueMap;
+import study.openfeign.domain.User;
+import study.openfeign.legacy.dto.UserProfile;
 import study.openfeign.legacy.dto.kakao.KakaoAuthToken;
 import study.openfeign.legacy.dto.kakao.profile.KakaoUserProfile;
 import study.openfeign.legacy.properties.KakaoAuthProperties;
@@ -25,13 +27,16 @@ import study.openfeign.legacy.properties.KakaoAuthProperties;
 @RequiredArgsConstructor
 public class KakaoAuthService implements AuthService {
 
+    private final UserService userService;
     private final DefaultService defaultService;
     private final KakaoAuthProperties authProperties;
 
     @Override
     public void create(String code) {
         String accessToken = getAccessToken(code);
-        getUserProfile(accessToken);
+        UserProfile userProfile = getUserProfile(accessToken);
+        User user = userProfile.toEntity();
+        userService.save(user);
     }
 
     @Override
