@@ -1,4 +1,4 @@
-package study.openfeign.legacy.dto.naver;
+package study.openfeign.dto.naver;
 
 public record Response(String name, String email) {
 }

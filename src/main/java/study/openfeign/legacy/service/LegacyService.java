@@ -12,12 +12,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
-import study.openfeign.legacy.dto.google.GoogleAuthToken;
-import study.openfeign.legacy.dto.google.GoogleUserProfile;
-import study.openfeign.legacy.dto.kakao.KakaoAuthToken;
-import study.openfeign.legacy.dto.kakao.profile.KakaoUserProfile;
-import study.openfeign.legacy.dto.naver.NaverAuthToken;
-import study.openfeign.legacy.dto.naver.NaverUserProfile;
+import study.openfeign.dto.google.GoogleAuthToken;
+import study.openfeign.dto.google.GoogleUserProfile;
+import study.openfeign.dto.kakao.KakaoAuthToken;
+import study.openfeign.dto.kakao.profile.KakaoUserProfile;
+import study.openfeign.dto.naver.NaverAuthToken;
+import study.openfeign.dto.naver.NaverUserProfile;
 
 @Slf4j
 @Service

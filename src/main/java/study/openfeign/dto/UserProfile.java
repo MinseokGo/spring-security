@@ -1,4 +1,4 @@
-package study.openfeign.legacy.dto;
+package study.openfeign.dto;
 
 import study.openfeign.domain.User;
 

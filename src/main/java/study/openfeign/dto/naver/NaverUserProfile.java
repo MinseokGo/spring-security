@@ -1,8 +1,8 @@
-package study.openfeign.legacy.dto.naver;
+package study.openfeign.dto.naver;
 
 import study.openfeign.domain.Service;
 import study.openfeign.domain.User;
-import study.openfeign.legacy.dto.UserProfile;
+import study.openfeign.dto.UserProfile;
 
 public record NaverUserProfile(Response response) implements UserProfile {
 

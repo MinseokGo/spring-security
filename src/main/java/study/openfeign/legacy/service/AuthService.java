@@ -1,6 +1,6 @@
 package study.openfeign.legacy.service;
 
-import study.openfeign.legacy.dto.UserProfile;
+import study.openfeign.dto.UserProfile;
 
 public interface AuthService {
 

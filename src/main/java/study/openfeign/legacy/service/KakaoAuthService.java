@@ -18,9 +18,9 @@ import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.util.MultiValueMap;
 import study.openfeign.domain.User;
-import study.openfeign.legacy.dto.UserProfile;
-import study.openfeign.legacy.dto.kakao.KakaoAuthToken;
-import study.openfeign.legacy.dto.kakao.profile.KakaoUserProfile;
+import study.openfeign.dto.UserProfile;
+import study.openfeign.dto.kakao.KakaoAuthToken;
+import study.openfeign.dto.kakao.profile.KakaoUserProfile;
 import study.openfeign.legacy.properties.KakaoAuthProperties;
 
 @Service

@@ -18,9 +18,9 @@ import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.util.MultiValueMap;
 import study.openfeign.domain.User;
-import study.openfeign.legacy.dto.UserProfile;
-import study.openfeign.legacy.dto.naver.NaverAuthToken;
-import study.openfeign.legacy.dto.naver.NaverUserProfile;
+import study.openfeign.dto.UserProfile;
+import study.openfeign.dto.naver.NaverAuthToken;
+import study.openfeign.dto.naver.NaverUserProfile;
 import study.openfeign.legacy.properties.NaverAuthProperties;
 
 @Service
