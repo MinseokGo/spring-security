@@ -1,19 +1,19 @@
 package study.openfeign.legacy.controller.controllerservice;
 
-import static study.openfeign.legacy.utils.Constants.GOOGLE;
+import static study.openfeign.legacy.utils.Constants.NAVER;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import study.openfeign.legacy.properties.GoogleAuthProperties;
-import study.openfeign.legacy.service.GooglAuthService;
+import study.openfeign.legacy.properties.NaverAuthProperties;
+import study.openfeign.legacy.service.NaverAuthService;
 import study.openfeign.legacy.utils.URLUtils;
 
-@Component(GOOGLE)
+@Component(NAVER)
 @RequiredArgsConstructor
-public class GoogleControllerService implements ControllerService {
+public class NaverControllerServiceV1 implements ControllerService {
 
-    private final GoogleAuthProperties authProperties;
-    private final GooglAuthService authService;
+    private final NaverAuthProperties authProperties;
+    private final NaverAuthService authService;
 
     @Override
     public String getRedirectURL() {
