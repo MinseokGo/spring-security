@@ -7,8 +7,9 @@ import org.springframework.stereotype.Component;
 import study.openfeign.legacy.properties.NaverAuthProperties;
 import study.openfeign.legacy.service.NaverAuthService;
 import study.openfeign.legacy.utils.URLUtils;
+import study.openfeign.presentation.controllerservice.ControllerService;
 
-@Component(NAVER)
+@Component("/v1/" + NAVER)
 @RequiredArgsConstructor
 public class NaverControllerServiceV1 implements ControllerService {
 
@@ -21,7 +22,8 @@ public class NaverControllerServiceV1 implements ControllerService {
     }
 
     @Override
-    public void oauth(String code) {
+    public String authorize(String code) {
         authService.create(code);
+        return code;
     }
 }

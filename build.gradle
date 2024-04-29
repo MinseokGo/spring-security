@@ -37,6 +37,7 @@ dependencies {
 
     // route
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    implementation 'org.springframework.cloud:spring-cloud-starter-loadbalancer'
 
     // database
     runtimeOnly 'com.h2database:h2'

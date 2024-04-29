@@ -7,8 +7,9 @@ import org.springframework.stereotype.Component;
 import study.openfeign.legacy.properties.GoogleAuthProperties;
 import study.openfeign.legacy.service.GooglAuthService;
 import study.openfeign.legacy.utils.URLUtils;
+import study.openfeign.presentation.controllerservice.ControllerService;
 
-@Component(GOOGLE)
+@Component("/v1/" + GOOGLE)
 @RequiredArgsConstructor
 public class GoogleControllerServiceV1 implements ControllerService {
 
@@ -21,7 +22,8 @@ public class GoogleControllerServiceV1 implements ControllerService {
     }
 
     @Override
-    public void oauth(String code) {
+    public String authorize(String code) {
         authService.create(code);
+        return code;
     }
 }

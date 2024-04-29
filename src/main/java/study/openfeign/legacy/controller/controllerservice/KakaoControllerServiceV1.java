@@ -7,8 +7,9 @@ import org.springframework.stereotype.Component;
 import study.openfeign.legacy.properties.KakaoAuthProperties;
 import study.openfeign.legacy.service.KakaoAuthService;
 import study.openfeign.legacy.utils.URLUtils;
+import study.openfeign.presentation.controllerservice.ControllerService;
 
-@Component(KAKAO)
+@Component("/v1/" + KAKAO)
 @RequiredArgsConstructor
 public class KakaoControllerServiceV1 implements ControllerService {
 
@@ -21,7 +22,8 @@ public class KakaoControllerServiceV1 implements ControllerService {
     }
 
     @Override
-    public void oauth(String code) {
+    public String authorize(String code) {
         authService.create(code);
+        return code;
     }
 }

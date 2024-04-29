@@ -1,8 +1,8 @@
-package study.openfeign.legacy.controller.controllerservice;
+package study.openfeign.presentation.controllerservice;
 
 public interface ControllerService {
 
     String getRedirectURL();
 
-    void oauth(String code);
+    String authorize(String code);
 }

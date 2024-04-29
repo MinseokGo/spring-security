@@ -1,9 +1,9 @@
-package study.openfeign.legacy.controller;
+package study.openfeign.presentation;
 
 import java.util.Map;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import study.openfeign.legacy.controller.controllerservice.ControllerService;
+import study.openfeign.presentation.controllerservice.ControllerService;
 
 @Component
 @RequiredArgsConstructor

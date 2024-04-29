@@ -1,4 +1,4 @@
-package study.openfeign.legacy.controller;
+package study.openfeign.presentation;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import study.openfeign.legacy.controller.controllerservice.ControllerService;
+import study.openfeign.presentation.controllerservice.ControllerService;
 
 @Controller
 @RequiredArgsConstructor
@@ -28,7 +28,6 @@ public class FrontController {
                            @RequestParam("code") String code) {
 
         ControllerService controllerService = condition.getControllerService(name);
-        controllerService.oauth(code);
-        return name;
+        return controllerService.authorize(code);
     }
 }

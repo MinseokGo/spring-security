@@ -3,7 +3,6 @@ package study.openfeign.legacy.service;
 import static study.openfeign.legacy.utils.Constants.AUTHORIZATION;
 import static study.openfeign.legacy.utils.Constants.AUTHORIZATION_CODE;
 import static study.openfeign.legacy.utils.Constants.CLIENT_ID;
-import static study.openfeign.legacy.utils.Constants.CLIENT_SECRET;
 import static study.openfeign.legacy.utils.Constants.CODE;
 import static study.openfeign.legacy.utils.Constants.CONTENT_TYPE;
 import static study.openfeign.legacy.utils.Constants.GRANT_TYPE;
@@ -46,8 +45,7 @@ public class KakaoAuthService implements AuthService {
                 GRANT_TYPE, AUTHORIZATION_CODE,
                 CODE, code,
                 CLIENT_ID, authProperties.getClientId(),
-                REDIRECT_URI, authProperties.getRedirectUri(),
-                CLIENT_SECRET, authProperties.getClientSecret());
+                REDIRECT_URI, authProperties.getRedirectUri());
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(body, headers);
 
         return defaultService.restTemplate(

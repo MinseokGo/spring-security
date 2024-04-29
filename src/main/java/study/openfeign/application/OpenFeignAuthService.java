@@ -1,2 +1,6 @@
-package study.openfeign.application;public class OpenFeignAuthService {
+package study.openfeign.application;
+
+public interface OpenFeignAuthService {
+
+    String authorization(String code);
 }
