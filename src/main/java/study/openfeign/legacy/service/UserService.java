@@ -17,9 +17,6 @@ public class UserService {
     @Transactional
     public User save(User user) {
         Optional<User> findUser = userRepository.findByEmail(user.getEmail());
-        if (findUser.isPresent()) {
-            return findUser.get();
-        }
-        return userRepository.save(user);
+        return findUser.orElseGet(() -> userRepository.save(user));
     }
 }

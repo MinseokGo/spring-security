@@ -1,20 +1,16 @@
-package study.openfeign.application.client;
+package study.openfeign.application.client.kakao;
 
-import java.net.URI;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import study.openfeign.config.OpenFeignConfig;
 import study.openfeign.dto.kakao.KakaoAuthToken;
 
-@FeignClient(name = "kakaoFeignClient", configuration = OpenFeignConfig.class, url = "https://kauth.kakao.com")
-public interface KakaoFeignClient {
+@FeignClient(name = "kakaoTokenClient", url = "https://kauth.kakao.com")
+public interface KakaoTokenClient {
 
-    @PostMapping(consumes = "application/x-www-form-urlencoded")
-    KakaoAuthToken getAuthToken(URI baseUrl,
-                                @RequestParam("grant_type") String grantType,
+    @PostMapping(value = "/oauth/token")
+    KakaoAuthToken getAuthToken(@RequestParam("grant_type") String grantType,
                                 @RequestParam("client_id") String clientId,
                                 @RequestParam("redirect_uri") String redirectUri,
                                 @RequestParam("code") String code);
 }
-

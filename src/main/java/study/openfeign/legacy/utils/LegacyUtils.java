@@ -2,7 +2,6 @@ package study.openfeign.legacy.utils;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import study.openfeign.legacy.properties.AuthProperties;
 
 /**
  * Deprecated legacy utils
